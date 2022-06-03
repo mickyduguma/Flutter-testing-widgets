@@ -12,4 +12,14 @@ void main() {
 
  });
 
+  testWidgets('Test second Form', (WidgetTester tester) async {
+  
+   await tester.pumpWidget(MyApp());
+
+   await tester.enterText(find.byKey(Key("textField")),'test');
+   await tester.enterText(find.byKey(Key("secondTextfield") ), 'test');
+   await tester.tap(find.byType(TextButton));
+
+ });
+
 }
